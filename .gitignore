@@ -1,0 +1,23 @@
+# OS & editor junk
+.DS_Store
+Thumbs.db
+.Trash/
+*.swp
+*~ 
+
+# Local envs, caches, sessions
+.venv/
+env/
+venv/
+__pycache__/
+.cache/
+.zsh_sessions/
+.vscode/
+.idea/
+
+# SSH (never commit)
+.ssh/id_*
+.ssh/known_hosts
+
+# local git config overrides
+.gitconfig.local

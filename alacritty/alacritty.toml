@@ -1,0 +1,88 @@
+# Alacritty Configuration File (TOML)
+# See: https://alacritty.org/config-alacritty.html
+# [general]
+# import = ["~/.config/alacritty-catppuccin/catppuccin-mocha.toml"]
+# import = ["~/.config/alacritty/themes/moonfly-alacritty.toml"]
+
+[terminal]
+# shell = { program = "/bin/zsh", args = ["-l"] }
+shell = { program = "/opt/homebrew/bin/fish" }
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+title = "Alacritty"
+decorations = "full"
+dynamic_padding = true
+opacity = 0.95
+startup_mode = "Windowed"
+blur = true
+option_as_alt = "Both"
+
+[window.padding]
+# x = 4
+# y = 4
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+bold   = { family = "FiraCode Nerd Font", style = "Bold" }
+italic = { family = "FiraCode Nerd Font", style = "Italic" }
+# normal.family = "Fira Code"
+size = 14
+builtin_box_drawing = true
+offset.x = 0
+offset.y = 0
+
+[cursor]
+style.shape = "Block"
+style.blinking = "On"
+vi_mode_style = "Beam"
+blink_interval = 500
+blink_timeout = 0
+unfocused_hollow = true
+thickness = 0.15
+
+[colors.primary]
+background = "#0a0a0f"
+foreground = "#d8dee9"
+
+[colors.normal]
+black   = "#1e1e28"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba6f7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+[colors.bright]
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba6f7"
+cyan    = "#94e2d5"
+white   = "#f2f2f2"
+
+[colors.cursor]
+text = "#0a0a0f"
+cursor = "#d8dee9"
+
+[colors.selection]
+text = "#0a0a0f"
+background = "#d8dee9"
+
+[mouse]
+hide_when_typing = true
+bindings = []
+
+[debug]
+render_timer = false
+log_level = "Warn"

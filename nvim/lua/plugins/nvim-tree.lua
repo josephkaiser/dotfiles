@@ -1,0 +1,24 @@
+-- lua/plugins/nvim-tree.lua
+return {
+  -- "nvim-tree/nvim-tree.lua",
+  -- version = false,
+  -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  -- lazy = false,
+  --
+  -- init = function()
+  --   vim.g.loaded_netrw = 1
+  --   vim.g.loaded_netrwPlugin = 1
+  --
+  -- config = function()
+  --   require("nvim-tree").setup({
+  --     disable_netrw = true,
+  --     hijack_netrw = true,
+  --     sync_root_with_cwd = true,
+  --     update_focused_file = { enable = true, update_root = false },
+  --     view = { width = 34 },
+  --     renderer = { group_empty = true },
+  --     filters = { dotfiles = true },
+  --   })
+  --   vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "File explorer" })
+  -- end,
+}
