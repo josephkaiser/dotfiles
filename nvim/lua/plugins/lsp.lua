@@ -32,7 +32,7 @@ return {
         handlers = {
           function(server)
             lspconfig[server].setup({
-              capabilities = lsp_capabilities,
+              capabilities = caps,
             })
           end,
 

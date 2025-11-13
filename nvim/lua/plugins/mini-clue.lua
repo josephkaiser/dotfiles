@@ -13,6 +13,9 @@ return {
     local plugin_leader_clues = {
       -- diagnostic
       { mode = "n", keys = "gl", desc = "Diagnose error message" },
+      
+      -- window controls / management
+      { mode = "n", keys = "<leader>w", desc = "Window controls"},
 
       -- bufferline
       { mode = "n", keys = "<leader>n",  desc = "Next buffer" },
@@ -45,15 +48,22 @@ return {
       { mode = "n", keys = "<leader>le", desc = "LSP: Line diagnostics" },
 
       -- DAP
-      { mode = "n", keys = "<leader>dc", desc = "Continue (F5)" },
-      { mode = "n", keys = "<leader>db", desc = "Toggle breakpoint (F9)" },
-      { mode = "n", keys = "<leader>do", desc = "Step over (F10)" },
-      { mode = "n", keys = "<leader>di", desc = "Step into (F11)" },
-      { mode = "n", keys = "<leader>du", desc = "Step out (F12)" },
-      { mode = "n", keys = "<leader>dB", desc = "Clear breakpoints" },
-      { mode = "n", keys = "<leader>dr", desc = "Restart" },
-      { mode = "n", keys = "<leader>dq", desc = "Terminate" },
-      { mode = "n", keys = "<leader>dU", desc = "Toggle DAP UI" },
+        -- pdb-style keybindings
+      { mode = "n", keys = "<leader>dc", desc = "DAP: Continue (c)" },
+      { mode = "n", keys = "<leader>dn", desc = "DAP: Next/Step over (n)" },
+      { mode = "n", keys = "<leader>ds", desc = "DAP: Step into (s)" },
+      { mode = "n", keys = "<leader>dr", desc = "DAP: Return/Step out (r)" },
+      { mode = "n", keys = "<leader>db", desc = "DAP: Break/Toggle breakpoint (b)" },
+      { mode = "n", keys = "<leader>dB", desc = "DAP: Clear all breakpoints" },
+      { mode = "n", keys = "<leader>dq", desc = "DAP: Quit (q)" },
+      { mode = "n", keys = "<leader>dR", desc = "DAP: Restart" },
+      
+        -- Keep F-key bindings for convenience
+      { mode = "n", keys = "<F5>", desc = "DAP: Continue" },
+      { mode = "n", keys = "<F9>", desc = "DAP: Toggle breakpoint" },
+      { mode = "n", keys = "<F10>", desc = "DAP: Step over" },
+      { mode = "n", keys = "<F11>", desc = "DAP: Step into" },
+      { mode = "n", keys = "<F12>", desc = "DAP: Step out" },
 
       -- Treesitter textobjects (adjust to your mappings)
       { mode = "o", keys = "<CR>",   desc = "TS: Node incremental" },
@@ -63,25 +73,25 @@ return {
       { mode = "o", keys = "<BS>",   desc = "TS: Node decremental" },
       { mode = "x", keys = "<BS>",   desc = "TS: Node decremental" },
 
-      -- iron.nvim (REPL)
-      { mode = "n", keys = "<leader>rr",       desc = "Toggle REPL" },
-      { mode = "n", keys = "<leader>rR",       desc = "Restart REPL" },
-      { mode = "n", keys = "<leader>sc",       desc = "Send motion" },
-      { mode = "v", keys = "<leader>sc",       desc = "Send selection" },
-      { mode = "n", keys = "<leader>sf",       desc = "Send file" },
-      { mode = "n", keys = "<leader>sl",       desc = "Send line" },
-      { mode = "n", keys = "<leader>sp",       desc = "Send paragraph" },
-      { mode = "n", keys = "<leader>su",       desc = "Send to cursor" },
-      { mode = "n", keys = "<leader>sm",       desc = "Send mark" },
-      { mode = "n", keys = "<leader>sb",       desc = "Send code block" },
-      { mode = "n", keys = "<leader>sn",       desc = "Send block + next" },
-      { mode = "n", keys = "<leader>mc",       desc = "Mark motion" },
-      { mode = "v", keys = "<leader>mc",       desc = "Mark selection" },
-      { mode = "n", keys = "<leader>md",       desc = "Remove mark" },
-      { mode = "n", keys = "<leader>s<cr>",    desc = "Send CR to REPL" },
-      { mode = "n", keys = "<leader>s<leader>",desc = "Interrupt REPL" },
-      { mode = "n", keys = "<leader>sq",       desc = "Quit REPL" },
-      { mode = "n", keys = "<leader>cl",       desc = "Clear REPL" },
+      -- -- iron.nvim (REPL)
+      -- { mode = "n", keys = "<leader>rr",       desc = "Toggle REPL" },
+      -- { mode = "n", keys = "<leader>rR",       desc = "Restart REPL" },
+      -- { mode = "n", keys = "<leader>sc",       desc = "Send motion" },
+      -- { mode = "v", keys = "<leader>sc",       desc = "Send selection" },
+      -- { mode = "n", keys = "<leader>sf",       desc = "Send file" },
+      -- { mode = "n", keys = "<leader>sl",       desc = "Send line" },
+      -- { mode = "n", keys = "<leader>sp",       desc = "Send paragraph" },
+      -- { mode = "n", keys = "<leader>su",       desc = "Send to cursor" },
+      -- { mode = "n", keys = "<leader>sm",       desc = "Send mark" },
+      -- { mode = "n", keys = "<leader>sb",       desc = "Send code block" },
+      -- { mode = "n", keys = "<leader>sn",       desc = "Send block + next" },
+      -- { mode = "n", keys = "<leader>mc",       desc = "Mark motion" },
+      -- { mode = "v", keys = "<leader>mc",       desc = "Mark selection" },
+      -- { mode = "n", keys = "<leader>md",       desc = "Remove mark" },
+      -- { mode = "n", keys = "<leader>s<cr>",    desc = "Send CR to REPL" },
+      -- { mode = "n", keys = "<leader>s<leader>",desc = "Interrupt REPL" },
+      -- { mode = "n", keys = "<leader>sq",       desc = "Quit REPL" },
+      -- { mode = "n", keys = "<leader>cl",       desc = "Clear REPL" },
     }
 
     -- build a flat list of clues

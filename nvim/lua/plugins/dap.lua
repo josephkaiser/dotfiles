@@ -2,19 +2,22 @@ return {
   {
     "mfussenegger/nvim-dap",
     keys = {
-      { "<leader>dc", function() require("dap").continue() end, desc = "DAP: Continue (F5)" },
-      { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "DAP: Toggle breakpoint (F9)" },
-      { "<leader>do", function() require("dap").step_over() end, desc = "DAP: Step over (F10)" },
-      { "<leader>di", function() require("dap").step_into() end, desc = "DAP: Step into (F11)" },
-      { "<leader>du", function() require("dap").step_out() end, desc = "DAP: Step out (F12)" },
+      -- pdb-style keybindings
+      { "<leader>dc", function() require("dap").continue() end, desc = "DAP: Continue (c)" },
+      { "<leader>dn", function() require("dap").step_over() end, desc = "DAP: Next/Step over (n)" },
+      { "<leader>ds", function() require("dap").step_into() end, desc = "DAP: Step into (s)" },
+      { "<leader>dr", function() require("dap").step_out() end, desc = "DAP: Return/Step out (r)" },
+      { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "DAP: Break/Toggle breakpoint (b)" },
+      { "<leader>dB", function() require("dap").clear_breakpoints() end, desc = "DAP: Clear all breakpoints" },
+      { "<leader>dq", function() require("dap").terminate() end, desc = "DAP: Quit (q)" },
+      { "<leader>dR", function() require("dap").restart() end, desc = "DAP: Restart" },
+      
+      -- Keep F-key bindings for convenience
       { "<F5>", function() require("dap").continue() end, desc = "DAP: Continue" },
       { "<F9>", function() require("dap").toggle_breakpoint() end, desc = "DAP: Toggle breakpoint" },
       { "<F10>", function() require("dap").step_over() end, desc = "DAP: Step over" },
       { "<F11>", function() require("dap").step_into() end, desc = "DAP: Step into" },
       { "<F12>", function() require("dap").step_out() end, desc = "DAP: Step out" },
-      { "<leader>dB", function() require("dap").clear_breakpoints() end, desc = "DAP: Clear breakpoints" },
-      { "<leader>dr", function() require("dap").restart() end, desc = "DAP: Restart" },
-      { "<leader>dq", function() require("dap").terminate() end, desc = "DAP: Terminate" },
     },
     config = function()
       local dap = require("dap")
@@ -23,9 +26,8 @@ return {
       local debugpy_python = vim.fn.expand("~/.venv/debugpy/bin/python")
       dap.adapters.python = { type = "executable", command = debugpy_python, args = { "-m", "debugpy.adapter" } }
       dap.configurations.python = {
-        { type = "python", request = "launch", name = "Launch file", program = "${file}" },
+        { type = "python", request = "launch", name = "Launch file", program = "${file}", console = "integratedTerminal"},
       }
-
       -- C/C++ (GDB)
       -- dap.adapters.gdb = {
       --   type = "executable",
@@ -52,7 +54,7 @@ return {
   },
   {
     "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "jay-babu/mason-nvim-dap.nvim", "theHamsta/nvim-dap-virtual-text" },
     keys = {
       { "<leader>dU", function() require("dapui").toggle() end, desc = "DAP UI: Toggle" },
     },
