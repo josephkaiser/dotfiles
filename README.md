@@ -2,7 +2,6 @@
 
 My personal dotfile repo.
 
-Neovim config needs some cleanup as the mini.clue hints don't work well. I commented out iron_repl but want to figure out how to work that.  
 
 ## Install:
 ```bash
@@ -43,8 +42,19 @@ Includes modern features of IDE in lightweight config that aims to stay pretty m
 
 **Features:**
 - Uses `:Lazy` for plugin management
-- Uses `:Mason` for LSP installation
+- Uses `:Mason` for LSP, DAP, Linter, Formatter install and updates
+- LSP configured for 
+    ◍ bash-language-server bashls
+    ◍ black
+    ◍ clangd
+    ◍ css-lsp cssls
+    ◍ debugpy
+    ◍ html-lsp html
+    ◍ json-lsp jsonls
+    ◍ pylint
+    ◍ pyright
 - DAP and DAP-UI for debugging with python set up
+- 
 - Oil file tree
 - Bufferline for file tabs
 - Several mini.nvim packages, including mini.animations for nice scrolling :)
