@@ -57,4 +57,4 @@ python3 -m venv "$VENV_DIR"
 echo "debugpy installed to $VENV_DIR"
 echo "Point your nvim-dap adapter to: $VENV_DIR/bin/python"
 
-echo "✅ Dotfiles install complete."
+echo "Dotfiles install complete."
