@@ -2,11 +2,6 @@
 
 My personal dotfile repo.
 
-Last updated: 11/15/25
-
-Changelog:
- - Added ts-autotag for easier html writing
-
 
 ## Install:
 ```bash
@@ -56,3 +51,4 @@ Includes modern features of IDE in lightweight config that aims to stay pretty m
 - Using Kanagawa colorscheme for now. Not sure if I like the actual colors or just the name and its origin
 - Spacebar as `<leader>` key, mini.clue for hints
 - Toggle comments with space + /
+- autotag for easier html tag writing
