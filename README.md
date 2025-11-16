@@ -2,6 +2,11 @@
 
 My personal dotfile repo.
 
+Last updated: 11/15/25
+
+Changelog:
+ - Added ts-autotag for easier html writing
+
 
 ## Install:
 ```bash
