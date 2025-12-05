@@ -1,4 +1,3 @@
---
 -- KEYMAPS
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>d", '"+d', { desc = "Delete to clipboard" })

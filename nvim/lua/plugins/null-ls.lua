@@ -31,14 +31,14 @@ return {
     })
 
     -- Manual commands
-    vim.api.nvim_create_user_command("PyFormat", function()
+    vim.api.nvim_create_user_command("Black", function()
       vim.lsp.buf.format({
         async = true,
         filter = function(c) return c.name == "null-ls" or c.name == "none-ls" end,
       })
     end, { desc = "Run Black formatter on current Python file" })
 
-    vim.api.nvim_create_user_command("PyLintFix", function()
+    vim.api.nvim_create_user_command("Pylint", function()
       if executable_exists("pylint") then
         vim.lsp.buf.format({
           async = true,

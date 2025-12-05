@@ -20,7 +20,7 @@ return {
     })
 
     -- Manual Black formatter
-    vim.api.nvim_create_user_command("PyFormat", function()
+    vim.api.nvim_create_user_command("Black", function()
       vim.lsp.buf.format({
         async = true,
         filter = function(c) return c.name == "null-ls" or c.name == "none-ls" end,
@@ -28,7 +28,7 @@ return {
     end, { desc = "Run Black formatter on current Python file" })
 
     -- Manual Pylint lint
-    vim.api.nvim_create_user_command("PyLintFix", function()
+    vim.api.nvim_create_user_command("Pylint", function()
       vim.lsp.buf.format({
         async = true,
         filter = function(c) return c.name == "null-ls" or c.name == "none-ls" end,
@@ -36,6 +36,6 @@ return {
       vim.diagnostic.setloclist({ open = true })
     end, { desc = "Run Pylint on current Python file" })
 
-    vim.notify("Python tools ready: :PyFormat (Black) and :PyLintFix (Pylint)", vim.log.levels.INFO)
+    vim.notify("Python tools ready: :Black (Black) and :Pylint (Pylint)", vim.log.levels.INFO)
   end,
 }
