@@ -22,7 +22,3 @@ end, { desc = "Toggle line comment" })
 --   vim.cmd("!~/.local/share/nvim/mason/bin/black %")
 -- end, { desc = "Format with Black" })
 
--- Diagnostic in float
-vim.keymap.set("n", 'gl', function()
-  vim.diagnostic.open_float(nil, { focus=false })
-end)
