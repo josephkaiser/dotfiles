@@ -23,12 +23,6 @@ return {
       { mode = "n", keys = "<leader>x",  desc = "Close buffer" },
       { mode = "n", keys = "<leader>=b", desc = "Format with Black" },
 
-      -- persistence.nvim
-      { mode = "n", keys = "<leader>qs", desc = "Restore session" },
-      { mode = "n", keys = "<leader>ql", desc = "Restore last session" },
-      { mode = "n", keys = "<leader>qd", desc = "Don't save session" },
-      { mode = "n", keys = "<leader>qS", desc = "Save session now" },
-
       -- telescope
       { mode = "n", keys = "<leader>ff", desc = "Find files" },
       { mode = "n", keys = "<leader>fg", desc = "Live grep" },
@@ -36,16 +30,18 @@ return {
       { mode = "n", keys = "<leader>fh", desc = "Help tags" },
 
       -- LSP
-      { mode = "n", keys = "gd",         desc = "Go to definition" },
-      { mode = "n", keys = "gr",         desc = "References" },
       { mode = "n", keys = "K",          desc = "Hover docs" },
+      { mode = "n", keys = "gd",         desc = "Go to definition" },
+      { mode = "n", keys = "gD",         desc = "Go to declaration" },
+      { mode = "n", keys = "gt",         desc = "Go to type definition" },
+      { mode = "n", keys = "gr",         desc = "References" },
+      { mode = "n", keys = "gi",         desc = "Go to implementation" },
       { mode = "n", keys = "<leader>rn", desc = "Rename symbol" },
       { mode = "n", keys = "<leader>ca", desc = "Code action" },
+      { mode = "n", keys = "<leader>f",  desc = "Format buffer" },
       { mode = "n", keys = "[d",         desc = "Prev diagnostic" },
       { mode = "n", keys = "]d",         desc = "Next diagnostic" },
-      { mode = "n", keys = "<leader>lr", desc = "LSP: Rename" },
-      { mode = "n", keys = "<leader>la", desc = "LSP: Code action" },
-      { mode = "n", keys = "<leader>le", desc = "LSP: Line diagnostics" },
+      { mode = "n", keys = "<leader>e",  desc = "Show diagnostic" },
 
       -- DAP
         -- pdb-style keybindings
@@ -102,7 +98,6 @@ return {
     add(miniclue.gen_clues.registers())
     add(miniclue.gen_clues.windows())
     add(miniclue.gen_clues.z())
-    add(global_clues)
     add(plugin_leader_clues)
     add(miniclue.gen_clues.g())
 
