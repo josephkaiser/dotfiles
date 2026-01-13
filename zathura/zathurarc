@@ -1,1 +1,12 @@
+# Set clipboard memory location
 set selection-clipboard clipboard
+
+# Always-on recolor for reading comfort
+set recolor true
+set recolor-keephue true
+
+# Cream paper background (low glare, neutral-warm)
+set recolor-lightcolor "#f2eadf"
+
+# Soft near-black text (reduces halation vs pure black)
+set recolor-darkcolor "#1c1c1c"
