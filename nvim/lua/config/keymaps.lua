@@ -22,3 +22,15 @@ end, { desc = "Toggle line comment" })
 --   vim.cmd("!~/.local/share/nvim/mason/bin/black %")
 -- end, { desc = "Format with Black" })
 
+
+-- Toggle diagnostics for current buffer
+local diagnostics_active = true
+vim.keymap.set('n', '<leader>td', function()
+  diagnostics_active = not diagnostics_active
+  if diagnostics_active then
+    vim.diagnostic.enable(0)
+  else
+    vim.diagnostic.disable(0)
+  end
+end, { desc = 'Toggle diagnostics for current buffer' })
+
