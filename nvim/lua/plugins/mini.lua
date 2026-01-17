@@ -6,7 +6,7 @@ return {
       require("mini.indentscope").setup()
       -- require("mini.pairs").setup()
       require("mini.surround").setup()
-      require("mini.trailspace").setup()
+      -- require("mini.trailspace").setup()
       require("mini.move").setup()
       require("mini.statusline").setup()
       require("mini.icons").setup()
